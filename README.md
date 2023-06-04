@@ -1,4 +1,12 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Project Description
+
+Welcome to `my-nextjs-journey`! This is a repository where I will be documenting my learning journey as I explore building web applications with Next.js.
+
+Throughout my journey, I will be conducting many experiments and encountering various errors along the way. In this repo, I will be documenting my progress, including notes on what I have learned, challenges I have faced, and how I overcame them.
+
+This repository serves not only as a personal learning tool but also as a resource for anyone who may be interested in learning about Next.js. Feel free to follow along with my journey, suggest improvements or even collaborate with me!
+
+Thanks for visiting and happy coding!
 
 ## Getting Started
 
