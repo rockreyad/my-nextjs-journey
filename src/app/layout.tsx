@@ -1,6 +1,7 @@
 import { ApolloWrapper } from "@/lib/apollo-provider";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import { Providers } from "@/lib/chakra";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ApolloWrapper>{children}</ApolloWrapper>
+        <ApolloWrapper>
+          <Providers>
+            <main className="subpixel-antialiased relative mx-auto flex min-h-screen h-screen overflow-hidden scroll-bar-hide justify-center bg-[#1A1B1E] text-gray-300">
+              <div className="w-full flex flex-row ">
+                <div
+                  id="scrollableDiv"
+                  className="flex flex-col p-2 md:px-8 md:pt-6  w-full overflow-y-auto h-full dark-scroll-bar"
+                >
+                  {children}
+                </div>
+              </div>
+            </main>
+          </Providers>
+        </ApolloWrapper>
       </body>
     </html>
   );

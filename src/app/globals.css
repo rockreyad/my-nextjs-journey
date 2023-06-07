@@ -2,26 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.body {
+  @apply bg-zinc-800;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  ul,
+  ol {
+    list-style: revert;
+    list-style-position: inside;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components {
+  /* .my-react-select-container {
+  } */
+  .my-react-select-container .my-react-select__control {
+    @apply border-0 bg-[#2E3033] p-1;
+  }
+
+  .my-react-select-container .my-react-select__control--is-focused {
+    @apply overflow-hidden border-[1px] border-neutral-500 shadow-none hover:border-neutral-500 dark:border-neutral-400 dark:hover:border-neutral-400;
+  }
+
+  .my-react-select-container .my-react-select__menu {
+    @apply overflow-hidden border-2 border-neutral-300 bg-neutral-100  text-gray-300 dark:border-neutral-800 dark:bg-neutral-800;
+  }
+
+  .my-react-select-container .my-react-select__option {
+    @apply bg-neutral-100 text-neutral-600 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700;
+  }
+  /* .my-react-select-container .my-react-select__option--is-focused {
+    @apply bg-neutral-200 dark:bg-neutral-800;
+  } */
+
+  .my-react-select-container .my-react-select__indicator-separator {
+    @apply bg-neutral-400;
+  }
+
+  .my-react-select-container .my-react-select__input-container,
+  .my-react-select-container .my-react-select__placeholder,
+  .my-react-select-container .my-react-select__single-value {
+    @apply text-neutral-600 dark:text-neutral-200;
+  }
 }
